@@ -104,6 +104,12 @@ sudo nano config.toml
 ./suaicloudapp
 ```
 
+При отсутствии прав для запуска приложения, может помочь команда:
+
+```bash
+chmod +rwx suaicloudapp
+```
+
 Полный скрипт автоматического развертывания приложения (при условии, что само приложение и файл конфигурации размещены в S3 bucket) может выглядеть так:
 
 ```bash
@@ -111,6 +117,7 @@ sudo nano config.toml
 mkdir suaicloudapp
 cd /suaicloudapp/
 sudo aws s3 sync s3://${bucket}/ .
+chmod +rwx suaicloudapp
 ./suaicloudapp
 ```
 
