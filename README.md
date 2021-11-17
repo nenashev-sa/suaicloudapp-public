@@ -114,10 +114,10 @@ chmod +rwx suaicloudapp
 
 ```bash
 #!/bin/bash
-mkdir suaicloudapp
+sudo mkdir /suaicloudapp
 cd /suaicloudapp/
 sudo aws s3 sync s3://${bucket}/ .
-chmod +rwx suaicloudapp
+sudo chmod +rwx suaicloudapp
 ./suaicloudapp
 ```
 
@@ -146,3 +146,7 @@ bucket=suaicloudbucket
 #### Health check
 
 На странице `/health` можно выполнить проверку работоспособности веб-сервера. Сообщение `healthy` символизирует о корректности работы приложения. Эту страницу можно использовать для `health check` в группе масштабирования.
+
+#### Logs
+
+На странице `/logs` можно получить логи сервера. Логи могут быть полезными для определения проблем, возникших при работе приложения.
