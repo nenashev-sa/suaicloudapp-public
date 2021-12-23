@@ -1,7 +1,7 @@
 [student]
-name = ''
-group = ''
-number = ''
+name = 'Sergey Nenashev'
+group = '4842'
+number = '19'
 
 [server]
 host = '0.0.0.0'
@@ -11,11 +11,11 @@ port = 8080
 region = 'eu-central-1'
 
 [s3]
-bucket = ''
+bucket = 'suaicloudbucket'
 
 [database]
-host = ''
+host = 'suai.clhbct1n77at.eu-central-1.rds.amazonaws.com'
 port = 3306
 user = 'admin'
-password = ''
+password = '1111111'
 dbname = 'suai'
